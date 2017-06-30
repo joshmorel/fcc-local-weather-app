@@ -1,0 +1,81 @@
+
+.flex-container {
+  background: url("https://source.unsplash.com/3oyeaivM_fE") no-repeat center;
+  position: absolute;
+  margin: auto 10vw 0;
+  width: 80vw;
+  top: 5%;
+  min-height: 90%;
+  border: dotted green;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.weather-card {
+  background: rgba(255,255,255,0.7);
+  padding: 10px;
+}
+
+.weather-text {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
+.temperature {
+  display: flex;
+  flex-direction: row;
+}
+
+.units {
+  display: flex;
+  flex-direction: column;
+  align-content:center;
+}
+
+.temperature > .value {
+  font-size: 300%;
+}
+
+.active-units {
+  font-size: 200%;
+}
+
+.btn-convert {
+  font-size: 60%;
+}
+
+.btn-convert:hover {
+  background-color: darkgray;
+}
+
+.external {
+  color: white;
+  text-decoration: none;
+  padding:4px 6px;
+  font-family:-apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
+  font-size:12px;
+  font-weight:bold;
+  line-height:1.2;
+  display:inline-block;
+  border-radius:3px;
+}
+
+.external > span {
+  display: inline-block;
+  padding: 2px 3px;
+}
+
+.external svg {
+  height: 11px;
+  width:auto;
+  position:relative;
+  vertical-align:middle;
+  top:-1px;
+  fill:white;
+}
+

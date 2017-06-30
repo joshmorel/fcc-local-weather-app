@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Weather App</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./styles/normalize.css"/>
+  <link rel="stylesheet" href="./styles/styles.css"/>
+</head>
+<header>
+
+</header>
+<body>
+<main>
+  <div class="flex-container">
+    <a class="external" href="https://joshmorel.ca/" target="_blank" rel="noopener noreferrer">
+      <span>Pen by Josh Morel</span>
+    </a>
+    <div class="weather-card">
+      <div class="weather-text">
+        <div class="temperature">
+          <div class="value">24</div>
+          <div class="units">
+            <div class="active-units">&deg;C</div>
+            <button class="btn-convert">C &#8644; F</button>
+          </div>
+        </div>
+        <div class="condition">Sunny</div>
+        <br/>
+        <div class="location">Waterloo</div>
+      </div>
+      <a href="https://www.yahoo.com/?ilc=401" target="_blank" rel="noopener noreferrer">
+        <img src="https://poweredby.yahoo.com/purple.png" width="134" height="29"/>
+      </a>
+    </div>
+    <a class="external credit-badge" href="" target="_blank" rel="noopener noreferrer" title="">
+      <span>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+        <title></title>
+        <path
+          d="M20.8 18.1c0 2.7-2.2 4.8-4.8 4.8s-4.8-2.1-4.8-4.8c0-2.7 2.2-4.8 4.8-4.8 2.7.1 4.8 2.2 4.8 4.8zm11.2-7.4v14.9c0 2.3-1.9 4.3-4.3 4.3h-23.4c-2.4 0-4.3-1.9-4.3-4.3v-15c0-2.3 1.9-4.3 4.3-4.3h3.7l.8-2.3c.4-1.1 1.7-2 2.9-2h8.6c1.2 0 2.5.9 2.9 2l.8 2.4h3.7c2.4 0 4.3 1.9 4.3 4.3zm-8.6 7.5c0-4.1-3.3-7.5-7.5-7.5-4.1 0-7.5 3.4-7.5 7.5s3.3 7.5 7.5 7.5c4.2-.1 7.5-3.4 7.5-7.5z">
+        </path>
+      </svg>
+    </span>
+      <span class="credit-name">Stefan Steinbauer</span>
+    </a>
+  </div>
+  <div>
+    <button onclick="loadWeatherPage()">load Weather Page tmp</button>
+    <button onclick="displayImage(1)">Get Image - Lightning</button>
+    <button onclick="getLocationFromIP()">Get Ip</button>
+    <button onclick="getWeatherFromCity('waterloo ontario ca')">Get Conditions - Waterloo</button>
+  </div>
+</main>
+
+<script src="./app.js"></script>
+</body>
+</html>
