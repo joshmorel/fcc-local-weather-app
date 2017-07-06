@@ -1,81 +1,148 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
 
 .flex-container {
-  background: url("https://source.unsplash.com/3oyeaivM_fE") no-repeat center;
-  position: absolute;
+  display: -webkit-flex; /*required for mobile safari*/
+  display: flex;
+}
+
+header {
+  color: darkslategrey;
+  text-align: center;
+  padding: 1em;
+}
+
+header > a:visited {
+  color: darkslategrey;
+}
+
+main {
+  position: relative;
   margin: auto 10vw 0;
   width: 80vw;
-  top: 5%;
-  min-height: 90%;
-  border: dotted green;
-
-  display: flex;
+  height: 80%;
   flex-direction: column;
-  justify-content: space-between;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
   align-items: center;
+  color: white;
+}
 
+.to-load {
+  visibility: hidden; /*hidden until loading via AJAX calls is done*/
+}
+
+.bg-img {
+  position: absolute;
+  background: lightgray no-repeat center center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  left: 0;
+  top: 0;
+  width:100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .weather-card {
-  background: rgba(255,255,255,0.7);
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  align-items: center;
+  background: rgba(0,0,0,0.8);
   padding: 10px;
 }
 
+
 .weather-text {
-  display: flex;
+  -webkit-flex-direction: column;
   flex-direction: column;
-  align-content: flex-start;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
-.temperature {
-  display: flex;
-  flex-direction: row;
+hr {
+  height: 0;
+  border: 0;
+  width: 80%;
+  -webkit-box-shadow: 0 0 1px 1px white;
+  box-shadow: 0 0 1px 1px white;
+}
+
+hr:after {
+  content: "\00a0";  /* Prevent margin collapse */
+}
+
+.weather-text span {
+  font-size: .9em;
 }
 
 .units {
-  display: flex;
+  /*for active units and unit conversion button*/
+  -webkit-flex-direction: column;
   flex-direction: column;
-  align-content:center;
+  -webkit-align-content: center;
+  align-content: center;
 }
 
 .temperature > .value {
-  font-size: 300%;
+  font-size: 3em;
 }
 
 .active-units {
-  font-size: 200%;
+  font-size: 2em;
 }
 
-.btn-convert {
-  font-size: 60%;
+.btn-convert-units {
+  font-size: .7em;
+  color: lightgray;
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
-.btn-convert:hover {
+.btn-convert-units:hover {
+  cursor: pointer;
   background-color: darkgray;
 }
 
-.external {
+.unsplash-badge {
   color: white;
+  /*text-shadow: 0 0 2px black;*/
   text-decoration: none;
   padding:4px 6px;
   font-family:-apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, "Segoe UI", Arial, sans-serif;
   font-size:12px;
   font-weight:bold;
   line-height:1.2;
-  display:inline-block;
   border-radius:3px;
 }
 
-.external > span {
-  display: inline-block;
+.unsplash-badge > span {
   padding: 2px 3px;
 }
 
-.external svg {
+.unsplash-badge:visited {
+  color: white;
+}
+
+.unsplash-badge svg {
   height: 11px;
   width:auto;
   position:relative;
   vertical-align:middle;
   top:-1px;
-  fill:white;
+  fill: white;
 }
 
