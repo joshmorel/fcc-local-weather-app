@@ -1,4 +1,4 @@
-# Random Quote Machine
+# Local Weather App
 
 Completion of Local Weather Free Code Camp challenge utilizing:
 
