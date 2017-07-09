@@ -121,9 +121,11 @@ const localWeather =
   }
 
   function handleFailure(err) {
-    console.log(err.message);
-    const weatherText = document.querySelector('.weather-text');
-    weatherText.innerText = "Sorry we couldn't retrieve the weather";
+    // console.log(err.message);
+    //Show default image
+    displayImage(3200);
+    const weatherCard = document.querySelector('.weather-card');
+    weatherCard.innerHTML = `<p>Sorry we couldn't retrieve the weather.<hr/><p>Error: ${err.message}</p>`;
   }
 
   function getWeatherFromLocation() {
