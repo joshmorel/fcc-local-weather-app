@@ -1,18 +1,17 @@
-# Local Weather App
+# Random Quote Machine
 
-Completion of Local Weather App freeCodeCamp challenge
+Completion of Local Weather Free Code Camp challenge utilizing:
 
-- [ ] Get user's location (lat, long)
-- [ ] If not available provide option to enter address 
-- [ ] With location, get current weather from https://darksky.net/dev/docs/forecast
+* Vanilla JS
+* Browser Geolocation
+* CSS3 FlexBox
+* [Yahoo Weather API](https://developer.yahoo.com/weather/)
+* [Unsplash](https://unsplash.com/) for photos
 
+Available for [view on CodePen](https://codepen.io/joshmorel/pen/KqxXqg).
 
-Remaining TODOS:
+## User Stories
 
-- [x] place image attribution properly without blurring
-- [ ] relook at images
-- [ ] add emojiis
-- [ ] switch to fetch if possible - look to Google course for Fetch info (CORS)
-- [ ] add animation - for loading and blur in
-
-
+- [x] I can see the weather in my current location.
+- [x] I can see a different icon or background image (e.g. snowy mountain, hot desert) depending on the weather.
+- [x] User Story: I can push a button to toggle between Fahrenheit and Celsius.
