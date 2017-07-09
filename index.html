@@ -8,33 +8,31 @@
   <link rel="stylesheet" href="./styles/normalize.css"/>
   <link rel="stylesheet" href="./styles/styles.css"/>
 </head>
-<header>
-
-</header>
 <body>
-<main>
-  <div class="flex-container">
-    <a class="external" href="https://joshmorel.ca/" target="_blank" rel="noopener noreferrer">
-      <span>Pen by Josh Morel</span>
-    </a>
-    <div class="weather-card">
-      <div class="weather-text">
-        <div class="temperature">
-          <div class="value">24</div>
-          <div class="units">
-            <div class="active-units">&deg;C</div>
-            <button class="btn-convert">C &#8644; F</button>
-          </div>
+<header>
+  Pen by <a href="https://joshmorel.ca/" target="_blank" rel="noopener noreferrer">Josh Morel</a>
+</header>
+<main class="flex-container">
+  <div class="bg-img"></div>
+  <div class="weather-card to-load flex-container">
+    <div class="weather-text flex-container">
+      <div class="temperature flex-container">
+        <div class="value"></div>
+        <div class="units flex-container">
+          <div class="active-units">&deg;C</div>
+          <button class="btn-convert-units" onclick="localWeather.convertTemperature()">F</button>
         </div>
-        <div class="condition">Sunny</div>
-        <br/>
-        <div class="location">Waterloo</div>
       </div>
+      <div><span class="condition"></span> | <span class="location"></span></div>
+    </div>
+    <hr/>
+    <div class="attribution">
       <a href="https://www.yahoo.com/?ilc=401" target="_blank" rel="noopener noreferrer">
-        <img src="https://poweredby.yahoo.com/purple.png" width="134" height="29"/>
+        <img src="https://poweredby.yahoo.com/white.png" width="134" height="29"/>
       </a>
     </div>
-    <a class="external credit-badge" href="" target="_blank" rel="noopener noreferrer" title="">
+  </div>
+    <a class="unsplash-badge to-load" href="" target="_blank" rel="noopener noreferrer" title="">
       <span>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
         <title></title>
@@ -43,17 +41,9 @@
         </path>
       </svg>
     </span>
-      <span class="credit-name">Stefan Steinbauer</span>
+      <span class="unsplash-name">Stefan Steinbauer</span>
     </a>
-  </div>
-  <div>
-    <button onclick="loadWeatherPage()">load Weather Page tmp</button>
-    <button onclick="displayImage(1)">Get Image - Lightning</button>
-    <button onclick="getLocationFromIP()">Get Ip</button>
-    <button onclick="getWeatherFromCity('waterloo ontario ca')">Get Conditions - Waterloo</button>
-  </div>
 </main>
-
 <script src="./app.js"></script>
 </body>
 </html>
